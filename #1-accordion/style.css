@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+    font-family: "Work Sans", sans-serif;
+    src: url('/assets/fonts/WorkSans-Italic-VariableFont_wght.ttf'),
+        url('/assets/fonts/WorkSans-VariableFont_wght.ttf');
+}
+
+body {
+    background-color: hsl(275, 100%, 97%) !important;
+    position: relative;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.wrapper {
+    position: absolute;
+    top: 150px;
+    width: 40vw;
+}
+
+.background {
+    background-image: url('/assets/images/background-pattern-desktop.svg');
+    width: auto;
+    height: 300px;
+}
+
+.container .box{
+    width: 40vw;
+    padding: 2.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 20px;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.box header h1{
+    color: hsl(292, 42%, 14%);
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.box header .star {
+    display: inline-block;
+    background-image: url('/assets/images/icon-star.svg');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+}
+
+.faq {
+    border-bottom: 2px solid hsl(275, 100%, 97%);
+}
+
+.faq:nth-child(4) {
+    border-bottom: none;
+}
+
+.faq h3 {
+    font-size: 16px;
+    color: hsl(292, 42%, 14%);
+}
+
+.faq .ques {
+    cursor: pointer;
+}
+
+.faq .ques h3 {
+    font-weight: bold;
+    font-family: "Work Sans", sans-serif;
+}
+
+.faq .ques h3:hover {
+    color: #AD29EB;
+}
+
+.faq .ques .activeBtn {
+    background-image: url('/assets/images/icon-plus.svg');
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+    transition: 1s ease;
+
+}
+
+.faq .ans h3 {
+    color: hsl(292, 16%, 49%);
+    font-weight: 300;
+    font-family: "Work Sans", sans-serif;
+}
+
+.faq .ans {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.4s ease;
+}
+
+.faq.active .ans {
+    max-height: 300px;
+    animation: fade 1s ease-in-out;
+}
+
+.faq.active .activeBtn {
+    background-image: url('/assets/images/icon-minus.svg');
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+}
+
+.attribution a {
+    text-decoration: none;
+    color: hsl(228, 45%, 44%);
+}
+
+.attribution {
+    font-size: 11px;
+}
+
+
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 375px) {
+    .wrapper {
+        width: 100vw !important;
+    }
+
+    .container .box {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 800px) {
+    .wrapper {
+        width: 70vw !important;
+    }
+
+    .container .box {
+        width: 100% !important;
+    }
+}

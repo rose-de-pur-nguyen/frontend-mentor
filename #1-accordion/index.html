@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | FAQ accordion</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Option 1: Include in HTML -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+<body>
+  <div class="main">
+    <div class="background"></div>
+
+    <div class="container d-flex justify-content-center">
+      <div class="wrapper d-flex flex-column align-items-center">
+        <div class="box mb-5">
+          <header class="mb-5 d-flex">
+            <span class="star me-3"></span>
+            <h1>FAQs</h1>
+          </header>
+    
+          <div class="faqs">
+            <div class="faq mb-4">
+              <div class="ques mb-4 row d-flex justify-content-between">
+                <h3 class="col-10">What is Frontend Mentor, and how will it help me?</h3>
+                <div class="activeBtn col-2"></div>
+              </div>
+              <div class="ans" id="ans-1">
+                <h3>
+                  Frontend Mentor offers realistic coding challenges to help developers improve their 
+                  frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for 
+                  all levels and ideal for portfolio building.
+                </h3>
+              </div>
+            </div>
+            
+            <div class="faq mb-4">
+              <div class="ques mb-4 row d-flex justify-content-between">
+                <h3 class="col-10">Is Frontend Mentor free?</h3>
+                <div class="activeBtn col-2"></div>
+              </div>
+              <div class="ans" id="ans-2">
+                <h3>
+                  Yes, Frontend Mentor offers both free and premium coding challenges, with the free 
+                  option providing access to a range of projects suitable for all skill levels.
+                </h3>
+              </div>  
+            </div>
+            
+            <div class="faq mb-4">
+              <div class="ques mb-4 row d-flex justify-content-between">
+                <h3 class="col-10">Can I use Frontend Mentor projects in my portfolio?</h3>
+                <div class="activeBtn col-2"></div>
+              </div>
+              <div class="ans" id="ans-3">
+                <h3>
+                  Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
+                  way to showcase your skills to potential employers!
+                </h3>
+              </div>  
+            </div>
+    
+            <div class="faq">
+              <div class="ques mb-4 row d-flex justify-content-between">
+                <h3 class="col-10">How can I get help if I'm stuck on a Frontend Mentor challenge?</h3>
+                <div class="activeBtn col-2"></div>
+              </div>
+              <div class="ans" id="ans-4">
+                <h3>
+                  The best place to get help is inside Frontend Mentor's Discord community. There's a help 
+                  channel where you can ask questions and seek support from other community members.
+                </h3>
+              </div>
+            </div>
+    
+          </div>
+        </div>
+
+        <div class="attribution mb-5">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+          Coded by <a href="#">Nhung Nguyen</a>.
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    const faqs = document.querySelectorAll('.faq');
+    faqs.forEach(faq => {
+      faq.addEventListener('click', () => {
+        faq.classList.toggle('active');
+      })
+    })
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
